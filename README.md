@@ -11,6 +11,7 @@ The Financial Opportunity Center database aims to keep track of client data, sup
 ## :rainbow: SQL Weekly Puzzle
  - ### [Danny's Dinner](https://github.com/Ellypham92/sql-data-analysis/blob/main/weekly%20challenge/mysql%20danny's%20dinner%20code)
  
- - #### Problem Statement: Danny plans on using the insights to help him decide whether he should expand the existing customer loyalty program - additionally he needs help to generate some basic datasets so his team can easily inspect the data without needing to use SQL
+ - #### Problem Statement: 
+Danny plans on using the insights to help him decide whether he should expand the existing customer loyalty program
  - #### [Entity Relationship Diagram & Dataset](https://8weeksqlchallenge.com/case-study-1/)
 
