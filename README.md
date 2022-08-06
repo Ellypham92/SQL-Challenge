@@ -13,5 +13,5 @@ The Financial Opportunity Center database aims to keep track of client data, sup
  
  - #### Problem Statement: 
 Danny is deciding whether he should expand the existing customer loyalty program.
- - #### [Entity Relationship Diagram & Dataset](https://8weeksqlchallenge.com/case-study-1/)
+ - #### Entity Relationship Diagram & Dataset: https://8weeksqlchallenge.com/case-study-1/
 
