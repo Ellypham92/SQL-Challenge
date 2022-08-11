@@ -100,33 +100,33 @@ WHERE caseID = 511;
 -- Generate a report for the total number of clients each
 -- department serves in a given time
 -- DROP PROCEDURE tol_client_per_department;
--- delimiter $$
--- CREATE PROCEDURE tol_client_per_department (report_start_date date, report_end_date date)
--- BEGIN
--- SELECT report_start_date, report_end_date, d.departmentName, count(cc.caseID) as total_clients
--- FROM department d
--- INNER JOIN service s ON d.departmentID = s.departmentID
--- INNER JOIN CLIENT_CASE cc ON cc.serviceID = s.serviceID
--- WHERE cc.start_date BETWEEN report_start_date AND report_end_date
--- GROUP BY d.departmentName;
--- END$$
--- delimiter $$
+delimiter $$
+CREATE PROCEDURE tol_client_per_department (report_start_date date, report_end_date date)
+BEGIN
+SELECT report_start_date, report_end_date, d.departmentName, count(cc.caseID) as total_clients
+FROM department d
+INNER JOIN service s ON d.departmentID = s.departmentID
+INNER JOIN CLIENT_CASE cc ON cc.serviceID = s.serviceID
+WHERE cc.start_date BETWEEN report_start_date AND report_end_date
+GROUP BY d.departmentName;
+END$$
+delimiter $$
 
--- CALL tol_client_per_department("2021-01-01",  "2021-03-31");
+CALL tol_client_per_department("2021-01-01",  "2021-03-31");
 
 -- Generate a report for the number of client cases each staff
 -- provided in a given time
--- DROP PROCEDURE tol_client_per_staff;
--- delimiter $$
--- CREATE PROCEDURE tol_client_per_staff (report_start_date date, report_end_date date)
--- BEGIN
--- SELECT report_start_date, report_end_date, s.fName, s.lName, count(c.caseID)
--- FROM staff s
--- INNER JOIN client_case c ON s.staffID = c.staffID
--- WHERE c.start_date BETWEEN report_start_date AND report_end_date
--- GROUP BY s.fName, s.lName;
--- END$$
--- delimiter $$;
+DROP PROCEDURE tol_client_per_staff;
+delimiter $$
+CREATE PROCEDURE tol_client_per_staff (report_start_date date, report_end_date date)
+BEGIN
+SELECT report_start_date, report_end_date, s.fName, s.lName, count(c.caseID)
+FROM staff s
+INNER JOIN client_case c ON s.staffID = c.staffID
+WHERE c.start_date BETWEEN report_start_date AND report_end_date
+GROUP BY s.fName, s.lName;
+END$$
+delimiter $$;
 
 -- CALL tol_client_per_staff ("2021-01-01",  "2021-12-31");
 
