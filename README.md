@@ -1,7 +1,7 @@
 ## :memo: SQL Project
 
  ### MySQL: Datase Management System for Financial Opportunity Center in Houston
- [View queries and use cases](https://github.com/Ellypham92/sql-data-analysis/tree/main/sql%20houston%20foc)
+ - [View queries and use cases](https://github.com/Ellypham92/sql-data-analysis/tree/main/sql%20houston%20foc)
  
 
  - ####  Overview:
